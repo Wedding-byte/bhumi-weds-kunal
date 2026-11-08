@@ -7,10 +7,24 @@
   <meta name="description" content="Together with their families, Kunal Mahajan & Dr Bhumi Patil cordially invite you to celebrate their wedding in Surat, 28th & 29th January 2027.">
   
   <!-- WhatsApp & Social Preview Metadata -->
+  <meta property="og:site_name" content="Kunal & Bhumi Wedding">
   <meta property="og:title" content="Wedding Invitation — Kunal Mahajan & Dr Bhumi Patil">
   <meta property="og:description" content="We would be honored by your presence and blessings at our wedding celebrations in Surat on 28 & 29 January 2027.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/couple-arch.jpg">
+  <meta property="og:url" content="https://wedding-byte.github.io/kunal-weds-bhumi/">
+  <meta property="og:image" content="https://wedding-byte.github.io/kunal-weds-bhumi/assets/wedding-preview-2027.jpg">
+  <meta property="og:image:secure_url" content="https://wedding-byte.github.io/kunal-weds-bhumi/assets/wedding-preview-2027.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="764">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="Kunal Mahajan & Dr Bhumi Patil Wedding Invitation">
+
+  <!-- WhatsApp & Twitter Fallback Preview -->
+  <link rel="image_src" href="https://wedding-byte.github.io/kunal-weds-bhumi/assets/wedding-preview-2027.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wedding Invitation — Kunal Mahajan & Dr Bhumi Patil">
+  <meta name="twitter:description" content="We would be honored by your presence and blessings at our wedding celebrations in Surat on 28 & 29 January 2027.">
+  <meta name="twitter:image" content="https://wedding-byte.github.io/kunal-weds-bhumi/assets/wedding-preview-2027.jpg">
   <meta name="theme-color" content="#130f13">
 
   <!-- Privacy: Prevent Google & Search Engines from Indexing Personal Photos/Details -->
@@ -1491,7 +1505,8 @@
               venue: "Swastik Party Plot",
               address: "Adajan Gam, Surat, Gujarat 394510",
               mapUrl: "https://maps.app.goo.gl/2N2XSSmFqoDfku629?g_st=iw",
-              dressCode: "Indo-Western Glitz / Cocktail Attire"
+              notePrefix: "✨ Note:",
+              dressCode: "Dress to impress — just don't look better than the groom! 😉✨"
             },
             {
               name: "Dinner",
@@ -1576,7 +1591,8 @@
               const mapUrl = ev.mapUrl || window.CONFIG.mapsDirectUrl;
               const evAddress = ev.address || window.CONFIG.venueAddress;
               const calTitle = encodeURIComponent(`${window.CONFIG.groomName} & ${window.CONFIG.brideName} Wedding: ${ev.name}`);
-              const calDetails = encodeURIComponent(`${ev.name} at ${ev.venue}. Dress Code: ${ev.dressCode}. Address: ${evAddress}`);
+              const noteLabel = ev.notePrefix || "✨ Attire:";
+              const calDetails = encodeURIComponent(`${ev.name} at ${ev.venue}. ${noteLabel} ${ev.dressCode}. Address: ${evAddress}`);
               const calLoc = encodeURIComponent(`${ev.venue}, ${evAddress}`);
               const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${calTitle}&details=${calDetails}&location=${calLoc}`;
 
@@ -1595,7 +1611,7 @@
                   </div>
                   <p class="event-address">${evAddress}</p>
                   <div class="event-dress-code">
-                    <span>✨ Attire:</span>
+                    <span>${noteLabel}</span>
                     <span>${ev.dressCode}</span>
                   </div>
                   <div class="event-actions">
