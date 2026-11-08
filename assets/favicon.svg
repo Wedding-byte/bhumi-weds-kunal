@@ -25,7 +25,7 @@
   <!-- Tiny decorative star on top -->
   <path d="M32 9.5 L32.8 11.5 L34.8 12.3 L32.8 13.1 L32 15.1 L31.2 13.1 L29.2 12.3 L31.2 11.5 Z" fill="url(#gold)"/>
   
-  <!-- KB Monogram Text -->
+  <!-- BK Monogram Text -->
   <text x="32" y="40" 
         font-family="'Cinzel', 'Cormorant Garamond', Georgia, serif" 
         font-size="21" 
@@ -33,5 +33,5 @@
         letter-spacing="1.2" 
         fill="url(#gold)" 
         text-anchor="middle"
-        filter="url(#glow)">KB</text>
+        filter="url(#glow)">BK</text>
 </svg>
